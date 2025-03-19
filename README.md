@@ -1,8 +1,5 @@
-### **Caso de Estudio: Modelo de Red Neuronal para la Predicción de Precios de Viviendas**
-**Duracion:(2 Semanas)**  
-
+# **Caso de Estudio: Modelo de Red Neuronal para la Predicción de Precios de Viviendas**
 ---
-
 ## **1. Business Case Discovery**  
 ### **1.1 Contexto del Negocio**  
 Eres parte de un equipo de análisis en una firma de inversión inmobiliaria. La empresa busca mejorar la precisión en la valoración de propiedades con el objetivo de maximizar la rentabilidad y minimizar riesgos. En este mercado, errores en la estimación de precios pueden resultar en pérdidas millonarias.
