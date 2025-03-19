@@ -1,0 +1,5 @@
+# Ignorar archivo Housing.csv en la carpeta DATASET
+PropNet-project/DATASET/Housing.csv
+
+# Ignorar el entorno virtual
+PropNet-project/environment/

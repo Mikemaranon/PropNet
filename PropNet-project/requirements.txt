@@ -1,0 +1,21 @@
+# Dependencies for data processing and visualization
+pandas
+numpy
+matplotlib
+seaborn
+scipy
+
+# Dependencies for building and training the neural network model
+tensorflow
+keras
+scikit-learn
+
+# Dependencies for building the API with Flask
+Flask
+Flask-Cors
+flask-restful
+
+# Other dependencies for general development
+jupyterlab
+notebook
+ipykernel
