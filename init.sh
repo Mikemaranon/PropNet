@@ -6,12 +6,8 @@ structure=(
     "1_Business_Case_Discovery/success_metrics.md"
     
     "2_Data_Processing/data_exploration/01_load_and_explore_data.ipynb"
-    "2_Data_Processing/data_exploration/exploratory_analysis.py"
-    "2_Data_Processing/data_exploration/data_cleaning.py"
     
     "2_Data_Processing/correlation_analysis/02_correlation_analysis.ipynb"
-    "2_Data_Processing/correlation_analysis/variable_selection.py"
-    "2_Data_Processing/correlation_analysis/outlier_detection.py"
     
     "2_Data_Processing/data_preprocessing/03_preprocess_data.ipynb"
     "2_Data_Processing/data_preprocessing/feature_encoding.py"
