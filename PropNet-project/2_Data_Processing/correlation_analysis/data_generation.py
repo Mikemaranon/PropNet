@@ -34,7 +34,7 @@ X = df_original.drop(columns='price')  # Asumimos que 'price' es la columna de e
 y = df_original['price']
 
 # Generar datos aumentados
-X_aug, y_aug = augment_data(X, y, num_samples=500)
+X_aug, y_aug = augment_data(X, y, num_samples=2500)
 
 # Concatenar los datos originales con los aumentados
 df_augmented = pd.concat([df_original, pd.concat([X_aug, y_aug], axis=1)], axis=0, ignore_index=True)
