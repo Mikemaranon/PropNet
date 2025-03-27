@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Variance Role in RMSE and R²}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Variance Role in RMSE and R²}
+Understanding the role of \textbf{variance} in \textbf{RMSE} and \( R^2 \) is key to comprehending how these metrics capture the accuracy and performance of a regression model. Let's dive deeper into the relationship between these metrics and variance.
+
+\section{Variance in Regression Models}
+\textbf{Variance} is a measure of how spread out the data is around its mean. In the context of a regression model, variance plays a key role in determining how much variability exists in the observed values and how well the model is able to capture that variability.
+
+\subsection{Total Variance (of the data)}
+The total variance of the data \( \text{Var}(Y) \) measures the spread of the actual \( y_i \) values around their mean \( \bar{y} \). It is a measure of how much variability is in the data, regardless of any model.
+
+\[
+\text{Var}(Y) = \frac{1}{n} \sum_{i=1}^{n} (y_i - \bar{y})^2
+\]
+
+Where:
+\begin{itemize}
+    \item \( y_i \) are the actual values.
+    \item \( \bar{y} \) is the mean of the actual values.
+    \item \( n \) is the number of observations.
+\end{itemize}
+
+\subsection{Variance Explained by the Model (Model Variance)}
+When you fit a regression model, it seeks to explain part of the total variance in the data, i.e., how much of the variability can be attributed to the model. The better the model, the more of the total variance it can explain.
+
+\subsection{Unexplained Variance (Residual Variance)}
+\textbf{Residual variance} is the variability in the actual values that the model fails to capture. It refers to the differences between predicted and actual values, i.e., the errors made by the model.
+
+The relationship between \textbf{total variance}, \textbf{explained variance}, and \textbf{residual variance} is key to understanding \( R^2 \) and \textbf{RMSE}.
+
+\section{The Role of Variance in \( R^2 \)}
+The \( R^2 \) (Coefficient of Determination) measures the proportion of the total variance in the data that is explained by the model. It is defined as:
+
+\[
+R^2 = 1 - \frac{\text{Residual Variance}}{\text{Total Variance}}
+\]
+
+Where:
+\begin{itemize}
+    \item \textbf{Total Variance} \( \text{Var}(Y) \): This is the variability in the actual data.
+    \item \textbf{Residual Variance} \( \text{Var}(Y - \hat{Y}) \): This is the variability that the model fails to capture.
+\end{itemize}
+
+The value of \( R^2 \) ranges from 0 to 1:
+\begin{itemize}
+    \item \( R^2 = 1 \): This means the model explains all the variance in the data, i.e., \textbf{the residual variance is 0} (no error).
+    \item \( R^2 = 0 \): The model explains none of the variability in the data, meaning the residual variance equals the total variance (the model doesn't improve the fit).
+\end{itemize}
+
+When \( R^2 \) is high, it means that a large portion of the \textbf{total variance} is explained by the model, indicating good model performance in terms of fit.
+
+\section{The Role of Variance in RMSE}
+\textbf{RMSE} measures the average magnitude of the prediction error, i.e., the average difference between the actual and predicted values. The formula for \textbf{RMSE} is:
+
+\[
+RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y_i})^2}
+\]
+
+In terms of \textbf{residual variance}, \textbf{RMSE} can be interpreted as the \textbf{square root of the mean residual variance}. The larger the \textbf{residual variance}, the larger the \textbf{RMSE}.
+
+\section{Relationship Between Variance, \( R^2 \), and RMSE}
+\subsection{High \( R^2 \) and Low RMSE}
+If \( R^2 \) is high, it means the model has explained most of the \textbf{total variance} in the data. A \textbf{low RMSE} indicates that the model's predictions are close to the actual values, meaning the model does a good job of capturing the variability in the data. In this case, the \textbf{residual variance} is small, and the errors are small on average.
+
+\subsection{Low \( R^2 \) and High RMSE}
+If \( R^2 \) is low, it means the model hasn't explained much of the \textbf{total variance} in the data. A \textbf{high RMSE} indicates that the prediction errors are large on average, meaning the model is not capturing the variability in the data well. In this case, the \textbf{residual variance} is large, reflecting large discrepancies between predicted and actual values.
+
+\section{Conclusion}
+\begin{itemize}
+    \item \( R^2 \) measures \textbf{how well} the model explains the variability in the data, i.e., how much \textbf{total variance} is explained by the model.
+    \item \textbf{RMSE} measures the magnitude of the prediction errors, reflecting the \textbf{residual variance} or the variability that the model failed to capture.
+\end{itemize}
+
+Both metrics are deeply connected to variance: \( R^2 \) reflects the relationship between \textbf{explained variance} and \textbf{total variance}, while RMSE is more related to \textbf{residual variance}. Ideally, a well-designed model will aim to maximize \( R^2 \) (explaining more variance) and minimize \textbf{RMSE} (reducing residual variance).
+
+\end{document}
